@@ -5,12 +5,15 @@
 #include "config.h"
 #include "util.h"
 
+// 处理从Leader节点发送来的 AppendEntries请求
 void Raft::AppendEntries1(const raftRpcProctoc::AppendEntriesArgs* args, raftRpcProctoc::AppendEntriesReply* reply) {
   std::lock_guard<std::mutex> locker(m_mtx);
-  reply->set_appstate(AppNormal);  // 能接收到代表网络是正常的
+//1.先要把本节点状态设为AppNormal，表示我是正常的能收到请求
+  reply->set_appstate(AppNormal);
   // Your code here (2A, 2B).
-  //	不同的人收到AppendEntries的反应是不同的，要注意无论什么时候收到rpc请求和响应都要检查term
+//2.检查term,任何时候收到请求响应都要检查
 
+  //任期<我，拒绝
   if (args->term() < m_currentTerm) {
     reply->set_success(false);
     reply->set_term(m_currentTerm);
@@ -22,6 +25,8 @@ void Raft::AppendEntries1(const raftRpcProctoc::AppendEntriesArgs* args, raftRpc
   //    Defer ec1([this]() -> void { this->persist(); });
   //    //由于这个局部变量创建在锁之后，因此执行persist的时候应该也是拿到锁的.
   DEFER { persist(); };  //由于这个局部变量创建在锁之后，因此执行persist的时候应该也是拿到锁的.
+
+  //任期>我，我追随它
   if (args->term() > m_currentTerm) {
     // 三变 ,防止遗漏，无论什么时候都是三变
     // DPrintf("[func-AppendEntries-rf{%v} ] 变成follower且更新term 因为Leader{%v}的term{%v}> rf{%v}.term{%v}\n", rf.me,
@@ -43,6 +48,8 @@ void Raft::AppendEntries1(const raftRpcProctoc::AppendEntriesArgs* args, raftRpc
   // 不能无脑的从prevlogIndex开始阶段日志，因为rpc可能会延迟，导致发过来的log是很久之前的
 
   //	那么就比较日志，日志有3种情况
+//3.处理日志同步
+  //
   if (args->prevlogindex() > getLastLogIndex()) {
     reply->set_success(false);
     reply->set_term(m_currentTerm);
