@@ -1,6 +1,12 @@
-//
-// Created by swx on 23-6-1.
-//
+/* kvserver:是raft节点与上层状态机之间的中间组件，为啥要加一层？让各层分工更明确：
+1.server层负责处理客户端请求和节点间通信，而状态机则专注于处理应用逻辑
+2.解耦合，把server层与状态机(数据层)分离，后续可以随意更换状态机，而不用大幅变动处理请求的代码
+外部rpc请求来了就发给kvserver,然后他们本机内部协商如何处理请求，返回响应
+
+线性一致性：保证强一致性。分布式中每个节点所有的操作顺序必须一致。
+raft是怎么做到的：每个client都有一个唯一的clientid,它的每个命令也有一个递增的commandid。server对每个client只执行递增的命令。
+
+*/
 
 #ifndef SKIP_LIST_ON_RAFT_KVSERVER_H
 #define SKIP_LIST_ON_RAFT_KVSERVER_H

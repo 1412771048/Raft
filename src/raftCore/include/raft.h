@@ -54,8 +54,8 @@ class Raft : public raftRpcProctoc::raftRpc {//继承此类：raftRPC.proto
   std::vector<int> m_matchIndex;                     //记录每个 Follower 节点已经复制的最高日志条目索引。即同步了多少条了
 
   std::shared_ptr<LockQueue<ApplyMsg>> applyChan;                     //client从这里取日志，client与raft通信的接口
-  std::chrono::_V2::system_clock::time_point m_lastResetElectionTime; //记录上一次选举超时的时间点
-  std::chrono::_V2::system_clock::time_point m_lastResetHearBeatTime; //记录上一次重置心跳超时的时间点
+  std::chrono::_V2::system_clock::time_point m_lastResetElectionTime; //记录上一次选举的时间点
+  std::chrono::_V2::system_clock::time_point m_lastResetHearBeatTime; //记录上一次发送心跳的时间点
 
   int m_lastSnapshotIncludeIndex;  //记录快照中的最后一个日志的Index和Term
   int m_lastSnapshotIncludeTerm;

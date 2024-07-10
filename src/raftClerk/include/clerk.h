@@ -1,6 +1,9 @@
-//
-// Created by swx on 23-6-4.
-//
+/*
+client肯定是要给leader节点发请求的：
+方法1：与所有raft节点都建立连接，挨个发，直至收到leader的回复
+方法2：随便想向一个节点发送，由它去转发给leader,但要注意若他挂了或者转发途中出现问题，所以要设置超时时间
+方法3：通过服务发现机制，如zookeeper，把leader节点的ip+port注册到一个公开的zookeeper上
+*/
 
 #ifndef SKIP_LIST_ON_RAFT_CLERK_H
 #define SKIP_LIST_ON_RAFT_CLERK_H
