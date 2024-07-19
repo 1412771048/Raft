@@ -15,15 +15,15 @@ class ApplyMsg {
 
  public:
   //两个valid最开始要赋予false！！
-  ApplyMsg()
-      : CommandValid(false),
-        Command(),
-        CommandIndex(-1),
-        SnapshotValid(false),
-        SnapshotTerm(-1),
-        SnapshotIndex(-1){
+  ApplyMsg(): CommandValid(false),
+              Command(),
+              CommandIndex(-1),
+              SnapshotValid(false),
+              SnapshotTerm(-1),
+              SnapshotIndex(-1)
+  {
 
-        };
+  }
 };
 
 #endif  // APPLYMSG_H
