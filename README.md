@@ -8,7 +8,7 @@
 - protoc
 
 **安装说明**
-- protoc，本地版本为3.12.4，ubuntu22使用`sudo apt-get install protobuf-compiler libprotobuf-dev`安装默认就是这个版本
+- protoc，本地版本为3.12.4，ubuntu22使用`sudo apt install protobuf-compiler libprotobuf-dev`安装默认就是这个版本
 - boost，`sudo apt-get install libboost-dev libboost-test-dev libboost-all-dev`
 - muduo,https://blog.csdn.net/QIANGWEIYUAN/article/details/89023980
 
