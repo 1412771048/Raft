@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/test_server.dir/server.cpp.o -o ../../../bin/test_server   -L/home/gyl/work/test/Raft/lib  -Wl,-rpath,/home/gyl/work/test/Raft/lib ../../../lib/libfiber_lib.a -lpthread -ldl -ldl 

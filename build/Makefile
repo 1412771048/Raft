@@ -169,84 +169,6 @@ fiber_lib/fast:
 .PHONY : fiber_lib/fast
 
 #=============================================================================
-# Target rules for targets named test_server
-
-# Build rule for target.
-test_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_server
-.PHONY : test_server
-
-# fast build rule for target.
-test_server/fast:
-	$(MAKE) $(MAKESILENT) -f example/fiberExample/CMakeFiles/test_server.dir/build.make example/fiberExample/CMakeFiles/test_server.dir/build
-.PHONY : test_server/fast
-
-#=============================================================================
-# Target rules for targets named test_scheduler
-
-# Build rule for target.
-test_scheduler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_scheduler
-.PHONY : test_scheduler
-
-# fast build rule for target.
-test_scheduler/fast:
-	$(MAKE) $(MAKESILENT) -f example/fiberExample/CMakeFiles/test_scheduler.dir/build.make example/fiberExample/CMakeFiles/test_scheduler.dir/build
-.PHONY : test_scheduler/fast
-
-#=============================================================================
-# Target rules for targets named test_iomanager
-
-# Build rule for target.
-test_iomanager: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_iomanager
-.PHONY : test_iomanager
-
-# fast build rule for target.
-test_iomanager/fast:
-	$(MAKE) $(MAKESILENT) -f example/fiberExample/CMakeFiles/test_iomanager.dir/build.make example/fiberExample/CMakeFiles/test_iomanager.dir/build
-.PHONY : test_iomanager/fast
-
-#=============================================================================
-# Target rules for targets named test_hook
-
-# Build rule for target.
-test_hook: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_hook
-.PHONY : test_hook
-
-# fast build rule for target.
-test_hook/fast:
-	$(MAKE) $(MAKESILENT) -f example/fiberExample/CMakeFiles/test_hook.dir/build.make example/fiberExample/CMakeFiles/test_hook.dir/build
-.PHONY : test_hook/fast
-
-#=============================================================================
-# Target rules for targets named provider
-
-# Build rule for target.
-provider: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 provider
-.PHONY : provider
-
-# fast build rule for target.
-provider/fast:
-	$(MAKE) $(MAKESILENT) -f example/rpcExample/callee/CMakeFiles/provider.dir/build.make example/rpcExample/callee/CMakeFiles/provider.dir/build
-.PHONY : provider/fast
-
-#=============================================================================
-# Target rules for targets named consumer
-
-# Build rule for target.
-consumer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 consumer
-.PHONY : consumer
-
-# fast build rule for target.
-consumer/fast:
-	$(MAKE) $(MAKESILENT) -f example/rpcExample/caller/CMakeFiles/consumer.dir/build.make example/rpcExample/caller/CMakeFiles/consumer.dir/build
-.PHONY : consumer/fast
-
-#=============================================================================
 # Target rules for targets named raftCoreRun
 
 # Build rule for target.
@@ -256,7 +178,7 @@ raftCoreRun: cmake_check_build_system
 
 # fast build rule for target.
 raftCoreRun/fast:
-	$(MAKE) $(MAKESILENT) -f example/raftCoreExample/CMakeFiles/raftCoreRun.dir/build.make example/raftCoreExample/CMakeFiles/raftCoreRun.dir/build
+	$(MAKE) $(MAKESILENT) -f example/CMakeFiles/raftCoreRun.dir/build.make example/CMakeFiles/raftCoreRun.dir/build
 .PHONY : raftCoreRun/fast
 
 #=============================================================================
@@ -269,7 +191,7 @@ callerMain: cmake_check_build_system
 
 # fast build rule for target.
 callerMain/fast:
-	$(MAKE) $(MAKESILENT) -f example/raftCoreExample/CMakeFiles/callerMain.dir/build.make example/raftCoreExample/CMakeFiles/callerMain.dir/build
+	$(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/build
 .PHONY : callerMain/fast
 
 src/fiber/fd_manager.o: src/fiber/fd_manager.cpp.o
@@ -738,16 +660,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... format"
 	@echo "... callerMain"
-	@echo "... consumer"
 	@echo "... fiber_lib"
-	@echo "... provider"
 	@echo "... raftCoreRun"
 	@echo "... rpc_lib"
 	@echo "... skip_list_on_raft"
-	@echo "... test_hook"
-	@echo "... test_iomanager"
-	@echo "... test_scheduler"
-	@echo "... test_server"
 	@echo "... src/fiber/fd_manager.o"
 	@echo "... src/fiber/fd_manager.i"
 	@echo "... src/fiber/fd_manager.s"

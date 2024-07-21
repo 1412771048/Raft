@@ -116,6 +116,154 @@ depend:
 	cd /home/gyl/work/test/Raft/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+example/CMakeFiles/raftCoreRun.dir/rule:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/CMakeFiles/raftCoreRun.dir/rule
+.PHONY : example/CMakeFiles/raftCoreRun.dir/rule
+
+# Convenience name for target.
+raftCoreRun: example/CMakeFiles/raftCoreRun.dir/rule
+.PHONY : raftCoreRun
+
+# fast build rule for target.
+raftCoreRun/fast:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/raftCoreRun.dir/build.make example/CMakeFiles/raftCoreRun.dir/build
+.PHONY : raftCoreRun/fast
+
+# Convenience name for target.
+example/CMakeFiles/callerMain.dir/rule:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/CMakeFiles/callerMain.dir/rule
+.PHONY : example/CMakeFiles/callerMain.dir/rule
+
+# Convenience name for target.
+callerMain: example/CMakeFiles/callerMain.dir/rule
+.PHONY : callerMain
+
+# fast build rule for target.
+callerMain/fast:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/build
+.PHONY : callerMain/fast
+
+__/src/common/util.o: __/src/common/util.cpp.o
+.PHONY : __/src/common/util.o
+
+# target to build an object file
+__/src/common/util.cpp.o:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/__/src/common/util.cpp.o
+.PHONY : __/src/common/util.cpp.o
+
+__/src/common/util.i: __/src/common/util.cpp.i
+.PHONY : __/src/common/util.i
+
+# target to preprocess a source file
+__/src/common/util.cpp.i:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/__/src/common/util.cpp.i
+.PHONY : __/src/common/util.cpp.i
+
+__/src/common/util.s: __/src/common/util.cpp.s
+.PHONY : __/src/common/util.s
+
+# target to generate assembly for a file
+__/src/common/util.cpp.s:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/__/src/common/util.cpp.s
+.PHONY : __/src/common/util.cpp.s
+
+__/src/raftClerk/clerk.o: __/src/raftClerk/clerk.cpp.o
+.PHONY : __/src/raftClerk/clerk.o
+
+# target to build an object file
+__/src/raftClerk/clerk.cpp.o:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/__/src/raftClerk/clerk.cpp.o
+.PHONY : __/src/raftClerk/clerk.cpp.o
+
+__/src/raftClerk/clerk.i: __/src/raftClerk/clerk.cpp.i
+.PHONY : __/src/raftClerk/clerk.i
+
+# target to preprocess a source file
+__/src/raftClerk/clerk.cpp.i:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/__/src/raftClerk/clerk.cpp.i
+.PHONY : __/src/raftClerk/clerk.cpp.i
+
+__/src/raftClerk/clerk.s: __/src/raftClerk/clerk.cpp.s
+.PHONY : __/src/raftClerk/clerk.s
+
+# target to generate assembly for a file
+__/src/raftClerk/clerk.cpp.s:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/__/src/raftClerk/clerk.cpp.s
+.PHONY : __/src/raftClerk/clerk.cpp.s
+
+__/src/raftClerk/raftServerRpcUtil.o: __/src/raftClerk/raftServerRpcUtil.cpp.o
+.PHONY : __/src/raftClerk/raftServerRpcUtil.o
+
+# target to build an object file
+__/src/raftClerk/raftServerRpcUtil.cpp.o:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/__/src/raftClerk/raftServerRpcUtil.cpp.o
+.PHONY : __/src/raftClerk/raftServerRpcUtil.cpp.o
+
+__/src/raftClerk/raftServerRpcUtil.i: __/src/raftClerk/raftServerRpcUtil.cpp.i
+.PHONY : __/src/raftClerk/raftServerRpcUtil.i
+
+# target to preprocess a source file
+__/src/raftClerk/raftServerRpcUtil.cpp.i:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/__/src/raftClerk/raftServerRpcUtil.cpp.i
+.PHONY : __/src/raftClerk/raftServerRpcUtil.cpp.i
+
+__/src/raftClerk/raftServerRpcUtil.s: __/src/raftClerk/raftServerRpcUtil.cpp.s
+.PHONY : __/src/raftClerk/raftServerRpcUtil.s
+
+# target to generate assembly for a file
+__/src/raftClerk/raftServerRpcUtil.cpp.s:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/__/src/raftClerk/raftServerRpcUtil.cpp.s
+.PHONY : __/src/raftClerk/raftServerRpcUtil.cpp.s
+
+caller.o: caller.cpp.o
+.PHONY : caller.o
+
+# target to build an object file
+caller.cpp.o:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/caller.cpp.o
+.PHONY : caller.cpp.o
+
+caller.i: caller.cpp.i
+.PHONY : caller.i
+
+# target to preprocess a source file
+caller.cpp.i:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/caller.cpp.i
+.PHONY : caller.cpp.i
+
+caller.s: caller.cpp.s
+.PHONY : caller.s
+
+# target to generate assembly for a file
+caller.cpp.s:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/callerMain.dir/build.make example/CMakeFiles/callerMain.dir/caller.cpp.s
+.PHONY : caller.cpp.s
+
+raftKvDB.o: raftKvDB.cpp.o
+.PHONY : raftKvDB.o
+
+# target to build an object file
+raftKvDB.cpp.o:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/raftCoreRun.dir/build.make example/CMakeFiles/raftCoreRun.dir/raftKvDB.cpp.o
+.PHONY : raftKvDB.cpp.o
+
+raftKvDB.i: raftKvDB.cpp.i
+.PHONY : raftKvDB.i
+
+# target to preprocess a source file
+raftKvDB.cpp.i:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/raftCoreRun.dir/build.make example/CMakeFiles/raftCoreRun.dir/raftKvDB.cpp.i
+.PHONY : raftKvDB.cpp.i
+
+raftKvDB.s: raftKvDB.cpp.s
+.PHONY : raftKvDB.s
+
+# target to generate assembly for a file
+raftKvDB.cpp.s:
+	cd /home/gyl/work/test/Raft/build && $(MAKE) $(MAKESILENT) -f example/CMakeFiles/raftCoreRun.dir/build.make example/CMakeFiles/raftCoreRun.dir/raftKvDB.cpp.s
+.PHONY : raftKvDB.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +272,23 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... callerMain"
+	@echo "... raftCoreRun"
+	@echo "... __/src/common/util.o"
+	@echo "... __/src/common/util.i"
+	@echo "... __/src/common/util.s"
+	@echo "... __/src/raftClerk/clerk.o"
+	@echo "... __/src/raftClerk/clerk.i"
+	@echo "... __/src/raftClerk/clerk.s"
+	@echo "... __/src/raftClerk/raftServerRpcUtil.o"
+	@echo "... __/src/raftClerk/raftServerRpcUtil.i"
+	@echo "... __/src/raftClerk/raftServerRpcUtil.s"
+	@echo "... caller.o"
+	@echo "... caller.i"
+	@echo "... caller.s"
+	@echo "... raftKvDB.o"
+	@echo "... raftKvDB.i"
+	@echo "... raftKvDB.s"
 .PHONY : help
 
 
